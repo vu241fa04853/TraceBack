@@ -101,8 +101,12 @@ WSGI_APPLICATION = "traceback_api.wsgi.application"
 # DATABASE
 # --------------------------------------------------
 
-DATABASES = {
-    DATABASE_URL = os.environ.get("DATABASE_URL")
+
+# --------------------------------------------------
+# DATABASE
+# --------------------------------------------------
+
+DATABASE_URL = os.environ.get("DATABASE_URL")
 
 if DATABASE_URL:
     DATABASES = {
@@ -123,8 +127,7 @@ else:
     raise RuntimeError(
         "DATABASE_URL is missing. Please configure Neon PostgreSQL in Render."
     )
-    
-}
+
 
 
 # --------------------------------------------------
