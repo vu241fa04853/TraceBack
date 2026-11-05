@@ -2,11 +2,11 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 
-const API =
-  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000/api/items/";
-  const ADMIN_URL = "http://127.0.0.1:8000/admin/";
+const BACKEND_URL = "https://traceback-backend-hdfz.onrender.com";
 
-const BACKEND_URL = API.replace(/\/api\/items\/?$/, "");
+const API = `${BACKEND_URL}/api/items/`;
+
+const ADMIN_URL = `${BACKEND_URL}/admin/`;
 
 const initialForm = {
   name: "",
